@@ -8,4 +8,22 @@ const ZERO: FC<LambdaExprProps> = args => (
 
 ZERO.displayName = "ZERO";
 
-export { ZERO };
+const ONE: FC<LambdaExprProps> = args => (
+  <βReduction λ={(f: any) => x => f(x)} {...args} />
+);
+
+ONE.displayName = "ONE";
+
+const TWO: FC<LambdaExprProps> = args => (
+  <βReduction λ={(f: any) => x => f(f(x))} {...args} />
+);
+
+TWO.displayName = "TWO";
+
+const THREE: FC<LambdaExprProps> = args => (
+  <βReduction λ={(f: any) => x => f(f(f(x)))} {...args} />
+);
+
+THREE.displayName = "THREE";
+
+export { ZERO, ONE, TWO, THREE };

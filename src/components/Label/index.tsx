@@ -8,6 +8,10 @@ interface LabelProps {
 
 const expressions: any = {
   IDENTITY: "λx.x",
+  ZERO: "λf.λx.x",
+  ONE: "λf.λx.f x",
+  TWO: "λf.λx.f (f x)",
+  THREE: "λf.λx.f (f (f x))",
   TRUE: "λx.λy.x",
   FALSE: "λx.λy.y",
   AND: "λp.λq.p q p",
