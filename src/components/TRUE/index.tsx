@@ -1,11 +1,16 @@
 import React, { FC } from "react";
-import λ from "../λ";
+import βReduction from "../βReduction";
+import { LambdaTerm } from "../../types";
 
 interface TRUEProps {
-  children?: any;
+  children?: LambdaTerm[];
 }
 
 const TRUE: FC<TRUEProps> = ({ children }) =>
-  children ? <λ expr={x => (_y: any) => x}>{children}</λ> : <>TRUE</>;
+  children ? (
+    <βReduction λ={x => (_y: LambdaTerm) => x}>{children}</βReduction>
+  ) : null;
+
+TRUE.displayName = "TRUE";
 
 export default TRUE;

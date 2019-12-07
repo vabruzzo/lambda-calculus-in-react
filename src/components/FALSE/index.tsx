@@ -1,11 +1,16 @@
 import React, { FC } from "react";
-import λ from "../λ";
+import βReduction from "../βReduction";
+import { LambdaTerm } from "../../types";
 
 interface FALSEProps {
-  children?: any;
+  children?: LambdaTerm[];
 }
 
 const FALSE: FC<FALSEProps> = ({ children }) =>
-  children ? <λ expr={x => (y: any) => y}>{children}</λ> : <>FALSE</>;
+  children ? (
+    <βReduction λ={x => (y: LambdaTerm) => y}>{children}</βReduction>
+  ) : null;
+
+FALSE.displayName = "FALSE";
 
 export default FALSE;

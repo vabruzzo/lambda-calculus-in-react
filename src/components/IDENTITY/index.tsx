@@ -1,11 +1,14 @@
 import React, { FC } from "react";
-import λ from "../λ";
+import βReduction from "../βReduction";
+import { LambdaTerm } from "../../types";
 
 interface IDENTITYProps {
-  children?: any;
+  children?: LambdaTerm[];
 }
 
 const IDENTITY: FC<IDENTITYProps> = ({ children }) =>
-  children ? <λ expr={x => x}>{children}</λ> : <>IDENTITY</>;
+  children ? <βReduction λ={x => x}>{children}</βReduction> : null;
+
+IDENTITY.displayName = "IDENTITY";
 
 export default IDENTITY;
