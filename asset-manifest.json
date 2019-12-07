@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/lambda-calculus-in-react/static/css/main.54441554.chunk.css",
-    "main.js": "/lambda-calculus-in-react/static/js/main.392914d6.chunk.js",
-    "main.js.map": "/lambda-calculus-in-react/static/js/main.392914d6.chunk.js.map",
+    "main.css": "/lambda-calculus-in-react/static/css/main.eb0cfb57.chunk.css",
+    "main.js": "/lambda-calculus-in-react/static/js/main.4315fcab.chunk.js",
+    "main.js.map": "/lambda-calculus-in-react/static/js/main.4315fcab.chunk.js.map",
     "runtime-main.js": "/lambda-calculus-in-react/static/js/runtime-main.c0e044b6.js",
     "runtime-main.js.map": "/lambda-calculus-in-react/static/js/runtime-main.c0e044b6.js.map",
     "static/js/2.9f46689f.chunk.js": "/lambda-calculus-in-react/static/js/2.9f46689f.chunk.js",
     "static/js/2.9f46689f.chunk.js.map": "/lambda-calculus-in-react/static/js/2.9f46689f.chunk.js.map",
     "index.html": "/lambda-calculus-in-react/index.html",
-    "precache-manifest.505b4a963cb78d6fcb6b13b30e1c337c.js": "/lambda-calculus-in-react/precache-manifest.505b4a963cb78d6fcb6b13b30e1c337c.js",
+    "precache-manifest.14375b89a76d40a1a57aa46650926793.js": "/lambda-calculus-in-react/precache-manifest.14375b89a76d40a1a57aa46650926793.js",
     "service-worker.js": "/lambda-calculus-in-react/service-worker.js",
-    "static/css/main.54441554.chunk.css.map": "/lambda-calculus-in-react/static/css/main.54441554.chunk.css.map",
+    "static/css/main.eb0cfb57.chunk.css.map": "/lambda-calculus-in-react/static/css/main.eb0cfb57.chunk.css.map",
     "static/js/2.9f46689f.chunk.js.LICENSE": "/lambda-calculus-in-react/static/js/2.9f46689f.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.c0e044b6.js",
     "static/js/2.9f46689f.chunk.js",
-    "static/css/main.54441554.chunk.css",
-    "static/js/main.392914d6.chunk.js"
+    "static/css/main.eb0cfb57.chunk.css",
+    "static/js/main.4315fcab.chunk.js"
   ]
 }
