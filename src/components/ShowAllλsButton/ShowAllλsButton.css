@@ -1,0 +1,13 @@
+.button {
+  background: transparent;
+  border: 1px solid #282c34;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 12px;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: #282c3413;
+}
