@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import βReduction from "../βReduction";
-import { LambdaTerm, Abstraction } from "../../types";
+import { LambdaTerm } from "../../types";
 
 interface IF_THEN_ELSEProps {
   children: LambdaTerm[];
