@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import IDENTITY from "./components/IDENTITY";
 import { ZERO, ONE, TWO, THREE } from "./components/numbers";
+import SUCCESSOR from "./components/numbers/SUCCESSOR";
 import TRUE from "./components/logic/TRUE";
 import FALSE from "./components/logic/FALSE";
 import AND from "./components/logic/AND";
@@ -27,6 +28,11 @@ const App: React.FC = () => {
             <CodeBlock>
               <Label name="IDENTITY" /> (<Label name="IDENTITY" />
               ): <IDENTITY args={[IDENTITY]} />
+            </CodeBlock>
+            <CodeBlock>
+              <Label name="SUCCESSOR" /> (<Label name="ONE" />{" "}
+              <Label name="IDENTITY" /> <Label name="IDENTITY" />
+              ): <SUCCESSOR args={[ONE]} />
             </CodeBlock>
             <CodeBlock>
               <Label name="TRUE" /> (<Label name="ZERO" /> <Label name="ONE" />

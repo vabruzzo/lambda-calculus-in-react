@@ -14,7 +14,7 @@ const βReduction: FC<βReductionProps> = ({ λ, args }) => {
   );
 
   return typeof application === "function" ? (
-    <Label name={application.displayName} />
+    <Label name={application.displayName || "ANONYMOUS"} />
   ) : (
     application
   );

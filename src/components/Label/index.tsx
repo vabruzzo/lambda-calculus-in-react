@@ -12,6 +12,7 @@ const expressions: any = {
   ONE: "λf.λx.f x",
   TWO: "λf.λx.f (f x)",
   THREE: "λf.λx.f (f (f x))",
+  SUCCESSOR: "λn.λf.λx.f (n f x)",
   TRUE: "λx.λy.x",
   FALSE: "λx.λy.y",
   AND: "λp.λq.p q p",
@@ -23,9 +24,11 @@ const Label: FC<LabelProps> = ({ name }) => {
   const [showλ, setShowλ] = useState(false);
   const { showAll } = useContext(ShowLambdasContext);
 
-  const handleClick = () => !showAll && setShowλ(!showλ);
+  const handleClick = () =>
+    name !== "ANONYMOUS" && !showAll && setShowλ(!showλ);
 
   const handleKeyPress = (event: KeyboardEvent) =>
+    name !== "ANONYMOUS" &&
     (event.key === "Enter" || event.key === " ") &&
     !showAll &&
     setShowλ(!showλ);
