@@ -3,13 +3,12 @@ import βReduction from "../βReduction";
 import { LambdaTerm } from "../../types";
 
 interface TRUEProps {
-  children?: LambdaTerm[];
+  children: LambdaTerm[];
 }
 
-const TRUE: FC<TRUEProps> = ({ children }) =>
-  children ? (
-    <βReduction λ={x => (_y: LambdaTerm) => x}>{children}</βReduction>
-  ) : null;
+const TRUE: FC<TRUEProps> = ({ children }) => (
+  <βReduction λ={x => y => x}>{children}</βReduction>
+);
 
 TRUE.displayName = "TRUE";
 

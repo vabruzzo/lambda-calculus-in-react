@@ -11,25 +11,25 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">Lambda Calculus in React</header>
       <CodeBlock>
-        identity: <IDENTITY>{[1]}</IDENTITY>
+        IDENTITY 1: <IDENTITY>{[1]}</IDENTITY>
       </CodeBlock>
       <CodeBlock>
-        identity: <IDENTITY>{[IDENTITY]}</IDENTITY>
+        IDENTITY IDENTITY: <IDENTITY>{[IDENTITY]}</IDENTITY>
       </CodeBlock>
       <CodeBlock>
-        <IDENTITY>{[<TRUE>{["a", "b"]}</TRUE>]}</IDENTITY>
+        TRUE a b: <TRUE>{["a", "b"]}</TRUE>
       </CodeBlock>
       <CodeBlock>
-        <TRUE>{["a", "b"]}</TRUE>
+        FALSE a b: <FALSE>{["a", "b"]}</FALSE>
       </CodeBlock>
       <CodeBlock>
-        <FALSE>{["a", "b"]}</FALSE>
+        IDENTITY TRUE a b: <IDENTITY>{[<TRUE>{["a", "b"]}</TRUE>]}</IDENTITY>
       </CodeBlock>
       <CodeBlock>
-        <TRUE>{[TRUE, "b"]}</TRUE>
+        TRUE TRUE b: <TRUE>{[TRUE, "b"]}</TRUE>
       </CodeBlock>
       <CodeBlock>
-        <IF_THEN_ELSE>{[TRUE, "fuck yeah", "b"]}</IF_THEN_ELSE>
+        IF_THEN_ELSE TRUE x y: <IF_THEN_ELSE>{[TRUE, "x", "y"]}</IF_THEN_ELSE>
       </CodeBlock>
     </div>
   );

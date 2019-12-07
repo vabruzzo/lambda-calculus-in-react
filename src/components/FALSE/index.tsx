@@ -3,13 +3,12 @@ import βReduction from "../βReduction";
 import { LambdaTerm } from "../../types";
 
 interface FALSEProps {
-  children?: LambdaTerm[];
+  children: LambdaTerm[];
 }
 
-const FALSE: FC<FALSEProps> = ({ children }) =>
-  children ? (
-    <βReduction λ={x => (y: LambdaTerm) => y}>{children}</βReduction>
-  ) : null;
+const FALSE: FC<FALSEProps> = ({ children }) => (
+  <βReduction λ={x => y => y}>{children}</βReduction>
+);
 
 FALSE.displayName = "FALSE";
 

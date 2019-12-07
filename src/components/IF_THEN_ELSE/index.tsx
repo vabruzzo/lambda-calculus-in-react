@@ -1,18 +1,16 @@
 import React, { FC } from "react";
 import βReduction from "../βReduction";
-import { LambdaTerm } from "../../types";
+import { LambdaTerm, Abstraction } from "../../types";
 
 interface IF_THEN_ELSEProps {
-  children?: LambdaTerm[];
+  children: LambdaTerm[];
 }
 
-const IF_THEN_ELSE: FC<IF_THEN_ELSEProps> = ({ children }) =>
-  children ? (
-    //@ts-ignore
-    <βReduction λ={P => a => b => P({ children: [a, b] })}>
-      {children}
-    </βReduction>
-  ) : null;
+const IF_THEN_ELSE: FC<IF_THEN_ELSEProps> = ({ children }) => (
+  <βReduction λ={(P: any) => a => b => P({ children: [a, b] })}>
+    {children}
+  </βReduction>
+);
 
 IF_THEN_ELSE.displayName = "IF_THEN_ELSE";
 

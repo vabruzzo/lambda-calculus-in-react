@@ -3,11 +3,12 @@ import βReduction from "../βReduction";
 import { LambdaTerm } from "../../types";
 
 interface IDENTITYProps {
-  children?: LambdaTerm[];
+  children: LambdaTerm[];
 }
 
-const IDENTITY: FC<IDENTITYProps> = ({ children }) =>
-  children ? <βReduction λ={x => x}>{children}</βReduction> : null;
+const IDENTITY: FC<IDENTITYProps> = ({ children }) => (
+  <βReduction λ={x => x}>{children}</βReduction>
+);
 
 IDENTITY.displayName = "IDENTITY";
 
