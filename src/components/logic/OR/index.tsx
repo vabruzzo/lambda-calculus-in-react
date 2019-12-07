@@ -1,12 +1,8 @@
 import React, { FC } from "react";
 import βReduction from "../../βReduction";
-import { LambdaTerm } from "../../../types";
+import { LambdaExprProps } from "../../../types";
 
-interface ORProps {
-  args: LambdaTerm[];
-}
-
-const OR: FC<ORProps> = args => (
+const OR: FC<LambdaExprProps> = args => (
   <βReduction λ={(p: any) => q => p({ args: [p, q] })} {...args} />
 );
 

@@ -1,12 +1,10 @@
 import React, { FC } from "react";
 import βReduction from "../../βReduction";
-import { LambdaTerm } from "../../../types";
+import { LambdaExprProps } from "../../../types";
 
-interface FALSEProps {
-  args: LambdaTerm[];
-}
-
-const FALSE: FC<FALSEProps> = args => <βReduction λ={x => y => y} {...args} />;
+const FALSE: FC<LambdaExprProps> = args => (
+  <βReduction λ={x => y => y} {...args} />
+);
 
 FALSE.displayName = "FALSE";
 

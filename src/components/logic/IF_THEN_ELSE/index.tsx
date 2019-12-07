@@ -1,12 +1,8 @@
 import React, { FC } from "react";
 import βReduction from "../../βReduction";
-import { LambdaTerm } from "../../../types";
+import { LambdaExprProps } from "../../../types";
 
-interface IF_THEN_ELSEProps {
-  args: LambdaTerm[];
-}
-
-const IF_THEN_ELSE: FC<IF_THEN_ELSEProps> = args => (
+const IF_THEN_ELSE: FC<LambdaExprProps> = args => (
   <βReduction λ={(p: any) => a => b => p({ args: [a, b] })} {...args} />
 );
 

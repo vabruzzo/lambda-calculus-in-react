@@ -5,8 +5,8 @@ import FALSE from "./components/logic/FALSE";
 import AND from "./components/logic/AND";
 import OR from "./components/logic/OR";
 import IF_THEN_ELSE from "./components/logic/IF_THEN_ELSE";
-import ShowAllλsButton from "./components/ShowAllλsButton";
-import ShowAllλs from "./components/ShowAllλs";
+import ShowLambdasButton from "./components/ShowLambdasButton";
+import ShowLambdas from "./components/ShowLambdas";
 import CodeBlock from "./components/CodeBlock";
 import Label from "./components/Label";
 import "./App.css";
@@ -16,8 +16,8 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">Lambda Calculus in React</header>
       <main>
-        <ShowAllλs>
-          <ShowAllλsButton />
+        <ShowLambdas>
+          <ShowLambdasButton />
           <CodeBlock>
             <Label name="IDENTITY" /> (1): <IDENTITY args={[1]} />
           </CodeBlock>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
             <Label name="IF_THEN_ELSE" /> (<Label name="FALSE" /> (c d)):{" "}
             <IF_THEN_ELSE args={[FALSE, "c", "d"]} />
           </CodeBlock>
-        </ShowAllλs>
+        </ShowLambdas>
       </main>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { FC, useState, useContext, KeyboardEvent } from "react";
-import { ShowλContext } from "../ShowAllλs";
+import { ShowLambdasContext } from "../ShowLambdas";
 import "./Label.css";
 
 interface LabelProps {
@@ -17,7 +17,7 @@ const expressions: any = {
 
 const Label: FC<LabelProps> = ({ name }) => {
   const [showλ, setShowλ] = useState(false);
-  const { showAll } = useContext(ShowλContext);
+  const { showAll } = useContext(ShowLambdasContext);
 
   const handleClick = () => !showAll && setShowλ(!showλ);
 

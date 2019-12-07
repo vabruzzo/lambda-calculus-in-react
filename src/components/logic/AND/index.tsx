@@ -1,12 +1,8 @@
 import React, { FC } from "react";
 import βReduction from "../../βReduction";
-import { LambdaTerm } from "../../../types";
+import { LambdaExprProps } from "../../../types";
 
-interface ANDProps {
-  args: LambdaTerm[];
-}
-
-const AND: FC<ANDProps> = args => (
+const AND: FC<LambdaExprProps> = args => (
   <βReduction λ={(p: any) => q => p({ args: [q, p] })} {...args} />
 );
 
