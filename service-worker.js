@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lambda-calculus-in-react/precache-manifest.14375b89a76d40a1a57aa46650926793.js"
+  "/lambda-calculus-in-react/precache-manifest.d5daa472ddc8f8274b7482e72e75e2ab.js"
 );
 
 self.addEventListener('message', (event) => {

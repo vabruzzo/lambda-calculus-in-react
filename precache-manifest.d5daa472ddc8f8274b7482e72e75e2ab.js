@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84b9003333c9d5b22b2da72c57ad0673",
+    "revision": "3aca91b7f316533b379b039ace2c3f88",
     "url": "/lambda-calculus-in-react/index.html"
   },
   {
-    "revision": "0fbf9354e86c7e484833",
-    "url": "/lambda-calculus-in-react/static/css/main.eb0cfb57.chunk.css"
+    "revision": "388f1ae9702989903634",
+    "url": "/lambda-calculus-in-react/static/css/main.41cf79a3.chunk.css"
   },
   {
     "revision": "5be7b8bdb653f4de09e7",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lambda-calculus-in-react/static/js/2.9f46689f.chunk.js.LICENSE"
   },
   {
-    "revision": "0fbf9354e86c7e484833",
-    "url": "/lambda-calculus-in-react/static/js/main.4315fcab.chunk.js"
+    "revision": "388f1ae9702989903634",
+    "url": "/lambda-calculus-in-react/static/js/main.9699e6fb.chunk.js"
   },
   {
     "revision": "87a3a5b04a54346ee001",
