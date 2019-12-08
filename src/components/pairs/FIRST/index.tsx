@@ -3,8 +3,8 @@ import βReduction from "../../βReduction";
 import TRUE from "../../logic/TRUE";
 import { LambdaExprProps } from "../../../types";
 
-const FIRST: FC<LambdaExprProps> = args => (
-  <βReduction λ={(p: any) => p({ args: [TRUE] })} {...args} />
+const FIRST: FC<LambdaExprProps> = ({ args }) => (
+  <βReduction λ={(p: any) => p({ args: [TRUE] })} args={args} />
 );
 
 FIRST.displayName = "FIRST";
