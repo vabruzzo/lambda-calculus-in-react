@@ -7,13 +7,16 @@ import FALSE from "./components/logic/FALSE";
 import AND from "./components/logic/AND";
 import OR from "./components/logic/OR";
 import IF_THEN_ELSE from "./components/logic/IF_THEN_ELSE";
+import PAIR from "./components/pairs/PAIR";
+import FIRST from "./components/pairs/FIRST";
+import SECOND from "./components/pairs/SECOND";
 import ShowLambdasButton from "./components/ShowLambdasButton";
 import ShowLambdas from "./components/ShowLambdas";
 import CodeBlock from "./components/CodeBlock";
 import Label from "./components/Label";
 import "./App.css";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <div className="App">
       <header className="App-header">Lambda Calculus in React</header>
@@ -48,8 +51,8 @@ const App: React.FC = () => {
               )): <IDENTITY args={[<TRUE args={[TWO, THREE]} />]} />
             </CodeBlock>
             <CodeBlock>
-              <Label name="TRUE" /> (<Label name="TRUE" /> (<Label name="ONE" />
-              )): <TRUE args={[TRUE, ONE]} />
+              <Label name="TRUE" /> (<Label name="TRUE" /> <Label name="ONE" />
+              ): <TRUE args={[TRUE, ONE]} />
             </CodeBlock>
             <CodeBlock>
               <Label name="AND" /> (<Label name="TRUE" /> <Label name="FALSE" />
@@ -93,6 +96,20 @@ const App: React.FC = () => {
               <Label name="IF_THEN_ELSE" /> (<Label name="FALSE" /> (
               <Label name="ONE" /> <Label name="TWO" />
               )): <IF_THEN_ELSE args={[FALSE, ONE, TWO]} />
+            </CodeBlock>
+            <CodeBlock>
+              <Label name="PAIR" /> (<Label name="ONE" /> <Label name="TWO" />
+              ): HoC {/*{PAIR({ args: [ONE, TWO] })}*/}
+            </CodeBlock>
+            <CodeBlock>
+              <Label name="FIRST" /> (<Label name="PAIR" /> (
+              <Label name="ONE" /> <Label name="TWO" />
+              )): <FIRST args={[PAIR({ args: [ONE, TWO] })]} />
+            </CodeBlock>
+            <CodeBlock>
+              <Label name="SECOND" /> (<Label name="PAIR" /> (
+              <Label name="ONE" /> <Label name="TWO" />
+              )): <SECOND args={[PAIR({ args: [ONE, TWO] })]} />
             </CodeBlock>
           </section>
         </ShowLambdas>

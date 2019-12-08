@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import βReduction from "../../βReduction";
 import { LambdaExprProps } from "../../../types";
 

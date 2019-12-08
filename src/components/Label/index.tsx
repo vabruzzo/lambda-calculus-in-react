@@ -18,6 +18,9 @@ const expressions: any = {
   AND: "λp.λq.p q p",
   OR: "λp.λq.p p q",
   IF_THEN_ELSE: "λp.λa.λb.p a b",
+  PAIR: "λx.λy.λf.f x y",
+  FIRST: "λp.p (λx.λy.x x y)",
+  SECOND: "λp.p (λx.λy.y x y)",
 };
 
 const Label: FC<LabelProps> = ({ name }) => {
