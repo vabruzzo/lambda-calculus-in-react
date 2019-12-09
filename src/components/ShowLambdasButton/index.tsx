@@ -11,7 +11,7 @@ const ShowLambdasButton: FC<ShowLambdasButtonProps> = () => {
 
   return (
     <button className="button" onClick={handleClick}>
-      {showAll ? "Hide λs" : "Show all λs"}{" "}
+      {showAll ? "Hide λs" : "Show λs"}{" "}
     </button>
   );
 };

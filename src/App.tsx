@@ -1,121 +1,32 @@
 import React, { FC } from "react";
-import IDENTITY from "./components/IDENTITY";
-import { ZERO, ONE, TWO, THREE } from "./components/numbers";
-import SUCCESSOR from "./components/numbers/SUCCESSOR";
-import TRUE from "./components/logic/TRUE";
-import FALSE from "./components/logic/FALSE";
-import AND from "./components/logic/AND";
-import OR from "./components/logic/OR";
-import IF_THEN_ELSE from "./components/logic/IF_THEN_ELSE";
-import PAIR from "./components/pairs/PAIR";
-import FIRST from "./components/pairs/FIRST";
-import SECOND from "./components/pairs/SECOND";
-import ShowLambdasButton from "./components/ShowLambdasButton";
-import ShowLambdas from "./components/ShowLambdas";
-import CodeBlock from "./components/CodeBlock";
-import Label from "./components/Label";
+import Link from "./components/Link";
+import Introduction from "./components/sections/Introduction";
+import Basics from "./components/sections/Basics";
+import Numbers from "./components/sections/Numbers";
+import Logic from "./components/sections/Logic";
+import Pairs from "./components/sections/Pairs";
+import Recursion from "./components/sections/Recursion";
 import "./App.css";
 
-const App: FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">Lambda Calculus in React</header>
-      <main>
-        <ShowLambdas>
-          <ShowLambdasButton />
-          <section>
-            <CodeBlock>
-              <Label name="IDENTITY" /> (<Label name="ONE" />
-              ) → <IDENTITY args={[ONE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="IDENTITY" /> (<Label name="IDENTITY" />
-              ) → <IDENTITY args={[IDENTITY]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="SUCCESSOR" /> (<Label name="ONE" />{" "}
-              <Label name="IDENTITY" /> <Label name="IDENTITY" />
-              ) → <SUCCESSOR args={[ONE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="TRUE" /> (<Label name="ZERO" /> <Label name="ONE" />
-              ) → <TRUE args={[ZERO, ONE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="FALSE" /> (<Label name="ONE" /> <Label name="TWO" />
-              ) → <FALSE args={[ONE, TWO]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="IDENTITY" /> (<Label name="TRUE" /> (
-              <Label name="TWO" /> <Label name="THREE" />
-              )) → <IDENTITY args={[<TRUE args={[TWO, THREE]} />]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="TRUE" /> (<Label name="TRUE" /> <Label name="ONE" />
-              ) → <TRUE args={[TRUE, ONE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="AND" /> (<Label name="TRUE" /> <Label name="FALSE" />
-              ) → <AND args={[TRUE, FALSE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="AND" /> (<Label name="TRUE" /> <Label name="TRUE" />
-              ) → <AND args={[TRUE, TRUE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="AND" /> (<Label name="FALSE" />{" "}
-              <Label name="FALSE" />
-              ) → <AND args={[FALSE, FALSE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="AND" /> (<Label name="FALSE" /> <Label name="TRUE" />
-              ) → <AND args={[FALSE, TRUE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="OR" /> (<Label name="TRUE" /> <Label name="FALSE" />
-              ) → <OR args={[TRUE, FALSE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="OR" /> (<Label name="TRUE" /> <Label name="TRUE" />
-              ) → <OR args={[TRUE, TRUE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="OR" /> (<Label name="FALSE" /> <Label name="FALSE" />
-              ) → <OR args={[FALSE, FALSE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="OR" /> (<Label name="FALSE" /> <Label name="TRUE" />
-              ) → <OR args={[FALSE, TRUE]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="IF_THEN_ELSE" /> (<Label name="TRUE" /> (
-              <Label name="ONE" /> <Label name="TWO" />
-              )) → <IF_THEN_ELSE args={[TRUE, ONE, TWO]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="IF_THEN_ELSE" /> (<Label name="FALSE" /> (
-              <Label name="ONE" /> <Label name="TWO" />
-              )) → <IF_THEN_ELSE args={[FALSE, ONE, TWO]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="PAIR" /> (<Label name="ONE" /> <Label name="TWO" />)
-              → HoC {/* {PAIR({ args: [ONE, TWO] })} */}
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="FIRST" /> (<Label name="PAIR" /> (
-              <Label name="ONE" /> <Label name="TWO" />
-              )) → <FIRST args={[PAIR({ args: [ONE, TWO] })]} />
-            </CodeBlock>
-            <CodeBlock>
-              <Label name="SECOND" /> (<Label name="PAIR" /> (
-              <Label name="ONE" /> <Label name="TWO" />
-              )) → <SECOND args={[PAIR({ args: [ONE, TWO] })]} />
-            </CodeBlock>
-          </section>
-        </ShowLambdas>
-      </main>
-    </div>
-  );
-};
+const App: FC = () => (
+  <div className="App">
+    <header className="App-header">
+      <h1 className="h1">Lambda Calculus in React</h1>
+      <p className="githubLink">
+        <Link to="https://github.com/thoughtbyte/lambda-calculus-in-react">
+          repo
+        </Link>
+      </p>
+    </header>
+    <main>
+      <Introduction />
+      <Basics />
+      <Numbers />
+      <Logic />
+      <Pairs />
+      <Recursion />
+    </main>
+  </div>
+);
 
 export default App;

@@ -4,22 +4,39 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0;
   color: white;
+}
+
+.h1 {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 2em;
+  padding: 16px 16px 0;
+  width: 100%;
+}
+
+.githubLink {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.5em;
+  padding: 0 16px 16px;
+  width: 100%;
+}
+
+.githubLink a {
+  color: white;
+}
+
+.githubLink a:hover,
+.githubLink a:focus,
+.githubLink a:active {
+  text-decoration: underline;
 }
 
 main {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 32px 16px;
   width: 100%;
-}
-
-section {
-  padding: 16px 0;
 }

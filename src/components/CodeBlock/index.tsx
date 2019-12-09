@@ -1,13 +1,12 @@
 import React, { FC, ReactNode } from "react";
+import "./CodeBlock.css";
 
 interface CodeBlockProps {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 const CodeBlock: FC<CodeBlockProps> = ({ children }) => (
-  <pre>
-    <code>{children}</code>
-  </pre>
+  <span className="codeBlock">{children}</span>
 );
 
 export default CodeBlock;

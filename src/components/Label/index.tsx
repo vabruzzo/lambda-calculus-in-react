@@ -6,7 +6,7 @@ interface LabelProps {
   name: string;
 }
 
-const expressions: any = {
+const expressions: { [key: string]: string } = {
   IDENTITY: "λx.x",
   ZERO: "λf.λx.x",
   ONE: "λf.λx.f x",
