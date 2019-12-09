@@ -1,0 +1,11 @@
+.link {
+  border-bottom: 2px solid #282c34;
+  color: #070707;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  background-color: #282c3413;
+}

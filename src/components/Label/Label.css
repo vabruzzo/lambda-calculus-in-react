@@ -1,9 +1,10 @@
 .label {
   cursor: pointer;
+  padding: 0 2px;
 }
 
 .label:hover,
 .label:focus,
 .label:active {
-  text-shadow: 1px 1px 10px #fff, 1px 1px 10px #282c34;
+  background-color: #282c3413;
 }
